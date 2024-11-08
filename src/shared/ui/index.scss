@@ -1,0 +1,75 @@
+@mixin button-size(
+  $padding-y,
+  $padding-x,
+  $font-size,
+  $line-height,
+  $border-radius
+) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+.a-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  // font-size: 20px !important;
+  // border: none;
+  // border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  // transition: all 0.25s ease;
+
+
+  &--fullwidth {
+    width: 100%;
+  }
+
+  &--sm {
+    @include button-size(12px, 24px, 16px, 21px, 100px)
+  }
+
+  &--base{
+    @include button-size(14px, 28px, 20px, 24px, 125px)
+  }
+
+  &--md {
+    @include button-size(24px, 48px, 32px, 42px, 200px)
+  }
+  &--lg {
+    @include button-size(48px, 96px, 64px, 84px, 400px)
+  }
+
+  &--primary {
+    background-color: #072047;
+    color: #ffffff;
+    box-shadow: 4px 4px 0px 0px #F5AD84;
+  }
+
+  &--secondary {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 4px 4px 0px 0px #EACAA9;
+  }
+
+  &--thirdary {
+    background-color: gray;
+    color: blue;
+  }
+
+
+  &--blue {
+    background-color: blue;
+    color: red;
+  }
+
+
+}
+
+
+
+
